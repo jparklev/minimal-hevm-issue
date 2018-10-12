@@ -11,11 +11,8 @@ contract MinimalHevmIssueTest is DSTest {
         issue = new MinimalHevmIssue();
     }
 
-    function testFail_basic_sanity() public {
-        assertTrue(false);
-    }
-
-    function test_basic_sanity() public {
-        assertTrue(true);
+    // reverts
+    function test_return_bytes() public {
+        issue.ping();
     }
 }
